@@ -19,9 +19,8 @@ export interface Iproductos {
   sub_category: string;
   tags: string;
   title_list: string;
-  top_banner: string;
-  top_banner2: {
-    h3_tag: string;
+  top_banner: {
+    h2_tag: string;
     P1_tag: string;
     h4_tag: string;
     p2_tag: string;

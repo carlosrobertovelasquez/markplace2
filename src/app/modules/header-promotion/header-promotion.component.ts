@@ -11,30 +11,37 @@ import { taggedTemplate } from '@angular/compiler/src/output/output_ast';
 export class HeaderPromotionComponent implements OnInit {
   path: string = Path.url;
   top_banner!: Iproductos;
-  top_banner2!: Itop_banner;
   _img_tag!: string;
-  _h3_tag!: string;
+  _h2_tag!: string;
+  _p1_tag!:string;
+  _h4_tag!:string;
+  _p2_tag!:string;
+  _span_tag!:string;
+  _button_tag!:string;
+  preload:Boolean=false;
   constructor(private _productsService: ProductsService) {}
 
   ngOnInit() {
+    this.preload=true;
     this._productsService.getData().subscribe((resp) => {
       /*Tomar la longitud del objecto*/
-      console.log('resp', resp);
       let i;
       let size = 0;
       for (i in resp) {
         size++;
       }
-
       /*Generar un numero aleatorio*/
       let index = Math.floor(Math.random() * size);
       /*Devolvemos a la vistas un banner aleatorios*/
-      //this.top_banner2 = resp[Object.keys(resp)[index]].top_banner;
       this.top_banner = resp[index];
-      this._img_tag = this.top_banner.top_banner2.img_tag;
-      
-      this.top_banner2 = this.top_banner.top_banner2;
-      this._h3_tag = this.top_banner.top_banner2.h3_tag;
+      this._img_tag = this.top_banner.top_banner.img_tag;
+      this._h2_tag = this.top_banner.top_banner.h2_tag;
+      this._p1_tag=  this.top_banner.top_banner.P1_tag
+      this._h4_tag = this.top_banner.top_banner.h4_tag;
+      this._p2_tag=  this.top_banner.top_banner.p2_tag;
+      this._span_tag=  this.top_banner.top_banner.span_tag;
+      this._button_tag=  this.top_banner.top_banner.button_tag;
+      this.preload=false;
     });
   }
 }
