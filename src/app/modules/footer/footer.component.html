@@ -99,70 +99,11 @@
   ======================================-->
 
     <div class="ps-footer__links">
-      <p>
-        <strong>Equipos Eletrónicos:</strong>
-        <a href="#">Aires Acondiciomado</a>
-        <a href="#">Audios &amp; Teatro Casa</a>
-        <a href="#">Eltronicos para Vehiculos</a>
-        <a href="#">Equipos de Oficina</a>
-        <a href="#">TV Televisores</a>
-        <a href="#">Lavadoras</a>
-      </p>
-
-      <p>
-        <strong>Ropa &amp; Moda:</strong>
-        <a href="#">Impresora</a>
-        <a href="#">Projectores</a>
-        <a href="#">Scanner</a>
-        <a href="#">Store &amp; Business</a>
-        <a href="#">4K Ultra HD TVs</a>
-        <a href="#">LED TVs</a>
-        <a href="#">OLED TVs</a>
-      </p>
-
-      <p>
-        <strong>Hogar,Jardin &amp; Cocina:</strong>
-        <a href="#">Cookware</a>
-        <a href="#">Decoration</a>
-        <a href="#">Furniture</a>
-        <a href="#">Garden Tools</a>
-        <a href="#">Garden Equipments</a>
-        <a href="#">Powers And Hand Tools</a>
-        <a href="#">Utensil &amp; Gadget</a>
-      </p>
-
-      <p>
-        <strong>Salud &amp; Belleza:</strong>
-        <a href="#">Hair Care</a>
-        <a href="#">Decoration</a>
-        <a href="#">Hair Care</a>
-        <a href="#">Makeup</a>
-        <a href="#">Body Shower</a>
-        <a href="#">Skin Care</a>
-        <a href="#">Cologine</a>
-        <a href="#">Perfume</a>
-      </p>
-
-      <p>
-        <strong>Joyas &amp; Relojes:</strong>
-        <a href="#">Necklace</a>
-        <a href="#">Pendant</a>
-        <a href="#">Diamond Ring</a>
-        <a href="#">Sliver Earing</a>
-        <a href="#">Leather Watcher</a>
-        <a href="#">Gucci</a>
-      </p>
-
-      <p>
-        <strong>Computadora &amp; Tecnologia:</strong>
-        <a href="#">Desktop PC</a>
-        <a href="#">Laptop</a>
-        <a href="#">Smartphones</a>
-        <a href="#">Tablet</a>
-        <a href="#">Game Controller</a>
-        <a href="#">Audio &amp; Video</a>
-        <a href="#">Wireless Speaker</a>
-        <a href="#">Done</a>
+      <p *ngFor="let category of categories; let lastIndex = last">
+        <strong [attr.category-footer]="category.name"
+          >{{ category.name }}:</strong
+        >
+        {{ lastIndex ? callback() : "" }}
       </p>
     </div>
 
