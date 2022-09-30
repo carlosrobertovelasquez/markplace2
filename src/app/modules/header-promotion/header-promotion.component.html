@@ -2,28 +2,31 @@
 	Header Promotion
 	======================================-->
 <div
-*ngIf="!preload "
+  *ngIf="!preload"
   class="ps-block--promotion-header bg--cover"
-  style="background: url(../../../assets/img/banner/top/{{_img_tag}})"
+  style="background: url({{ path }}img/products/{{ _category }}/top/{{
+    _img_tag
+  }})"
 >
-
   <div class="container">
     <div class="ps-block__left">
-      <h3>{{_h2_tag}}</h3>
+      <h3>{{ _h2_tag }}</h3>
       <figure>
-        <p>{{_p1_tag}}</p>
-        <h4>{{_h4_tag}}</h4>
+        <p>{{ _p1_tag }}</p>
+        <h4>{{ _h4_tag }}</h4>
       </figure>
     </div>
     <div class="ps-block__center">
-      <p>{{_p2_tag}}<span>{{_span_tag}}</span></p>
+      <p>
+        {{ _p2_tag }}<span>{{ _span_tag }}</span>
+      </p>
     </div>
-    <a class="ps-btn ps-btn--sm" href="#">{{_button_tag}}</a>
+    <a class="ps-btn ps-btn--sm" href="#">{{ _button_tag }}</a>
   </div>
 </div>
 <!--=====================================
 Preload
 	======================================-->
-<div *ngIf="preload " class="d-flex justify-content-center">
+<div *ngIf="preload" class="d-flex justify-content-center">
   <div class="spinner-border text-muted my-3"></div>
 </div>

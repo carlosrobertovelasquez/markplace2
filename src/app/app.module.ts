@@ -1,3 +1,9 @@
+import { HomeBannerComponent } from './pages/home/home-banner/home-banner.component';
+import { Error404Component } from './pages/error404/error404.component';
+import { SearchComponent } from './pages/search/search.component';
+import { ProductComponent } from './pages/product/product.component';
+import { ProductsComponent } from './pages/products/products.component';
+import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './modules/footer/footer.component';
 import { NewletterComponent } from './modules/newletter/newletter.component';
 import { HeaderMobileComponent } from './modules/header-mobile/header-mobile.component';
@@ -17,6 +23,12 @@ import { AppComponent } from './app.component';
     HeaderMobileComponent,
     NewletterComponent,
     FooterComponent,
+    HomeComponent,
+    ProductsComponent,
+    ProductComponent,
+    SearchComponent,
+    Error404Component,
+    HomeBannerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

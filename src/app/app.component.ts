@@ -567,7 +567,7 @@ export class AppComponent implements OnInit {
             range: true,
             values: [defaultMinValue, defaultMaxValue],
             slide: function (event: any, ui: any[]) {
-              var values = ui.values;
+              var values = ui.values();
               min.text('$' + values[0]);
               max.text('$' + values[1]);
             },
@@ -850,8 +850,7 @@ export class AppComponent implements OnInit {
         rating();
         backToTop();
         stickyHeader();
-        /*    filterSlider()*/
-        /* mapConfig()*/ modalInit();
+        /*filterSlider()*/ /* mapConfig()*/ modalInit();
         searchInit();
         countDown();
         mainSlider();
