@@ -1,6 +1,7 @@
 /*Exportamos la ruta para las imagenes*/
 export let Path = {
-  url: 'http://localhost:4200/assets/',
+  //url: 'http://localhost:4200/assets/',
+  url: 'https://markplace2.vercel.app/assets/',
 };
 
 /*Exportamos el endPoint de la APIREST de Firebase*/
