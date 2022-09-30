@@ -16199,7 +16199,7 @@ textarea.form-control {
   z-index: 9999;
   text-align: center;
   border-bottom: 0 none;
-  background-color: #00a59b;
+  background-color: #b2dfdd;
   -webkit-transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
