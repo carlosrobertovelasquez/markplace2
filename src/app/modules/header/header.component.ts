@@ -23,15 +23,19 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     /*Tomar datos de la categorias*/
-    this._categoriasService.getData().subscribe((resp) => {
-      this.categories = resp;
-      /*Recorremos la coleccion de categoria para tomar la lista de titulos*/
-      let i;
-      for (i in resp) {
-        /*Separamos la lista de titulos en un inidce de un array*/
-        this.arrayTitleList.push(JSON.parse(resp[i].title_list));
-      }
-    });
+    setTimeout(() => {
+      this._categoriasService.getData().subscribe({
+        next: (resp) => {
+          this.categories = resp;
+          /*Recorremos la coleccion de categoria para tomar la lista de titulos*/
+          let i;
+          for (i in resp) {
+            /*Separamos la lista de titulos en un inidce de un array*/
+            this.arrayTitleList.push(JSON.parse(resp[i].title_list));
+          }
+        },
+      });
+    }, 0);
   }
   /* funcion que nos avisan cuando termina*/
   callback() {

@@ -12,4 +12,12 @@ export class ProductsService {
   getData(): Observable<Iproductos[]> {
     return this.http.get<Iproductos[]>(`${this.api}products.json`);
   }
+  getLimitData(
+    startAt: String,
+    limitToFirst: Number
+  ): Observable<Iproductos[]> {
+    return this.http.get<Iproductos[]>(
+      `${this.api}products.json?orderBy="$key"&startAt="${startAt}"&limitToFirst=${limitToFirst}&print=pretty`
+    );
+  }
 }

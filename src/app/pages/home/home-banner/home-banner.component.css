@@ -1,0 +1,38 @@
+#homepage-1 .ps-home-banner {
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+
+#homepage-1 .ps-home-banner .owl-slider {
+  max-width: 100%;
+}
+
+.ps-home-banner .ps-container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-flow: row nowrap;
+}
+
+.ps-home-banner .ps-container > * {
+  width: 100%;
+}
+
+.ps-home-banner .ps-container .ps-section__left {
+  padding-right: 30px;
+  max-width: calc(100% - 390px);
+}
+
+.ps-home-banner .ps-container .ps-section__right {
+  max-width: 390px;
+}
+
+.ps-home-banner .ps-container .ps-section__right .ps-collection {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.ps-home-banner .ps-container .ps-section__right .ps-collection:last-child {
+  margin-bottom: 0;
+}
