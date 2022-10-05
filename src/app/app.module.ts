@@ -1,3 +1,4 @@
+import { HomeFeaturesComponent } from './pages/home/home-features/home-features.component';
 import { HomeBannerComponent } from './pages/home/home-banner/home-banner.component';
 import { Error404Component } from './pages/error404/error404.component';
 import { SearchComponent } from './pages/search/search.component';
@@ -31,6 +32,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SearchComponent,
     Error404Component,
     HomeBannerComponent,
+    HomeFeaturesComponent,
   ],
   imports: [
     BrowserModule,
