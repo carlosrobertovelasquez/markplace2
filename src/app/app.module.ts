@@ -1,3 +1,4 @@
+import { HomeHotTodayComponent } from './pages/home/home-hot-today/home-hot-today.component';
 import { HomePromotionsComponent } from './pages/home/home-promotions/home-promotions.component';
 import { HomeFeaturesComponent } from './pages/home/home-features/home-features.component';
 import { HomeBannerComponent } from './pages/home/home-banner/home-banner.component';
@@ -35,6 +36,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HomeBannerComponent,
     HomeFeaturesComponent,
     HomePromotionsComponent,
+    HomeHotTodayComponent,
   ],
   imports: [
     BrowserModule,
