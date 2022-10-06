@@ -6,7 +6,7 @@
     *ngFor="let item of banner_home; let i = index; let lastIndex = last"
     ngbSlide
   >
-    <div class="ps-banner--market-4">
+    <div *ngIf="!preload" class="ps-banner--market-4">
       <div class="picsum-img-wrapper">
         <img
           src="{{ path }}img/products/{{ category[i] }}/horizontal/{{
@@ -29,3 +29,6 @@
     </div>
   </ng-template>
 </ngb-carousel>
+<div *ngIf="preload" class="d-flex justify-content-center">
+  <div class="spinner-border text-muted my-5"></div>
+</div>

@@ -1,3 +1,4 @@
+import { HomePromotionsComponent } from './pages/home/home-promotions/home-promotions.component';
 import { HomeFeaturesComponent } from './pages/home/home-features/home-features.component';
 import { HomeBannerComponent } from './pages/home/home-banner/home-banner.component';
 import { Error404Component } from './pages/error404/error404.component';
@@ -33,6 +34,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     Error404Component,
     HomeBannerComponent,
     HomeFeaturesComponent,
+    HomePromotionsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,27 +1,19 @@
-import { Iproductos } from './../../../model/productos';
-import { inject } from '@angular/core/testing';
 import { ProductsService } from './../../../services/products.service';
 import { Component, OnInit } from '@angular/core';
 import { Path } from 'src/app/config';
 
-import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
-
 @Component({
-  selector: 'app-home-banner',
-  templateUrl: './home-banner.component.html',
-  styleUrls: ['./home-banner.component.css'],
+  selector: 'app-home-promotions',
+  templateUrl: './home-promotions.component.html',
+  styleUrls: ['./home-promotions.component.css'],
 })
-export class HomeBannerComponent implements OnInit {
+export class HomePromotionsComponent implements OnInit {
   path: string = Path.url;
-  banner_home: Array<any> = [];
+  banner_default: Array<any> = [];
   category: Array<any> = [];
   url: Array<any> = [];
-  render = true;
   preload: Boolean = false;
-  constructor(
-    private _productsService: ProductsService,
-    private _ngbCarouselConfig: NgbCarouselConfig
-  ) {}
+  constructor(private _productsService: ProductsService) {}
 
   ngOnInit() {
     this.preload = true;
@@ -34,15 +26,16 @@ export class HomeBannerComponent implements OnInit {
         size++;
       }
       /*Generar un numero aleatorio*/
-      if (size > 5) {
-        index = Math.floor(Math.random() * (size - 5));
+      if (size > 2) {
+        index = Math.floor(Math.random() * (size - 2));
       }
+
       this._productsService
-        .getLimitData(Object.keys(resp)[index], 5)
+        .getLimitData(Object.keys(resp)[index], 2)
         .subscribe((resp) => {
           let i;
           for (i in resp) {
-            this.banner_home.push(resp[i].horizontal_slider);
+            this.banner_default.push(resp[i].default_banner);
             this.category.push(resp[i].category);
             this.url.push(resp[i].url);
           }
